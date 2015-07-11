@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * Spinner Search Template
+ */
 class searchTemplate {
     var $templateFinder;
     var $repeats;
@@ -16,7 +18,7 @@ class searchTemplate {
 
     function addRoute($startIndexes, $endIndex, $fieldName, $sortOrder, $breakIfNoneFound)
     {
-        $w = new RouteWSDL();
+        $w = new routeSPD();
         
     	$w->breakIfNoneFound = $breakIfNoneFound;
     	$w->endIndex = $endIndex;
