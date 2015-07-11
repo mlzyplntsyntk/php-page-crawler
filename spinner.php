@@ -15,69 +15,6 @@ class spinner {
     function spinner() 
     {
         
-        /*$this->noJobAuth();
-        $this->URL = "http://teknoloji.milliyet.com.tr/";
-        $tf = new templateFinder(array('<div class="startTop">'), '<div class="paging">', TRUE);
-        $st = new searchTemplate("Nenanona", true, $tf);
-        $st->addRoute(array("<a target=\"_blank\" href=\""), "\">", "link", 1, true);    
-        $st->addRoute(array("<strong>"), "</strong>", "title", 1, false);    
-        array_push($this->searchTemplate, $st);
-        $this->getResult();
-        */
-        /*$this->noJobAuth();
-        $this->URL = "http://teknoloji.milliyet.com.tr/nokia-dan-dev-telefon-geliyor/mobildunya/detay/1801213/default.htm";
-        $st = new searchTemplate("Nenanona", false, null);
-        $st->addRoute(array("<div class=\"date\">"), "</div>", "date", 1, true);
-        $st->addRoute(array("<h1>"), "</h1>", "title", 2, false);    
-        $st->addRoute(array("<h2>"), "</h2>", "subTitle", 3, false);   
-        $st->addRoute(array("<div id=\"divAdnetKeyword3\" class=\"content\">", "<p", ">"), "</p>", "content1", 4, false);     
-        $st->addRoute(array("<p", ">"), "</p>", "content2", 4, false);       
-        $st->addRoute(array("<p", ">"), "</p>", "content3", 4, false);       
-        $st->addRoute(array("<p", ">"), "</p>", "content4", 4, false);       
-        $st->addRoute(array("<p", ">"), "</p>", "content5", 4, false);     
-        array_push($this->searchTemplate, $st);
-        $this->getResult();*/
-        
-        /*
-        $this->noJobAuth();
-        $this->URL = "http://www.sanalmarket.com.tr/kweb/shview/1-migros-sanal-market";
-        
-        $tf = new templateFinder(array('<div class="hurBox promoBox">'), 'div class="hurRight">', TRUE);
-        $st = new searchTemplate("Nenanona", true, $tf);
-        $st->addRoute(array('<a target="_blank" href="'), '"', "link", 1, true);    
-        $st->addRoute(array('title="'), '"', "title", 1, false);    
-        $st->addRoute(array(' data-original="'), '"', "picture", 3, false);
-        array_push($this->searchTemplate, $st);
-        
-        $tf = new templateFinder(array('<div class="hurBox flasFour">'), '<div class="hurBox clr">', TRUE);
-        $st2 = new searchTemplate("Nenanona2", true, $tf);
-        $st2->addRoute(array('<a target="_blank" href="'), '"', "link", 1, true);    
-        $st2->addRoute(array('title="'), '"', "title", 2, false);    
-        $st2->addRoute(array('<img src="'), '"', "picture", 3, false);
-        array_push($this->searchTemplate, $st2);
-        
-        $tf = new templateFinder(array('<div class="mansetRight mainMansetRight">'), '<div class="hurBox clr">', TRUE);
-        $st2 = new searchTemplate("Nenanona2", true, $tf);
-        $st2->addRoute(array('<a target="_blank" href="'), '"', "link", 1, true);    
-        $st2->addRoute(array('title="'), '"', "title", 2, false);    
-        $st2->addRoute(array(' data-original="'), '"', "picture", 3, false);
-        array_push($this->searchTemplate, $st2);
-        */
-        
-        /*
-        $this->noJobAuth();
-        $this->URL = "http://localhost/horeca/temp/migrosMain.html";
-        
-        $tf = new templateFinder(array('anaNavLayout'), 'mainLayout', TRUE);
-        $st = new searchTemplate("Nenanona", true, $tf);
-        $st->addRoute(array('class="anaNavListHeader2">', '>'), '<', "category", 1, true);
-        $st->addRoute(array('class="baslik">', '>'), '<', "subCategory", 2, false);
-        $st->addRoute(array('<div>', '>'), '<', "product", 3, true);
-        array_push($this->searchTemplate, $st);
-        
-        
-        $this->getResult();
-        */
     }
     
     function getResult() 
@@ -132,41 +69,6 @@ class spinner {
                 }
                 
                 while ($hasToGoON) {
-                    
-                    /*$subContent = "";
-                    
-                    if ((!$_st->templateFinder != null) && (!$_st->templateFinder->searchContent)) {
-                        
-                        print("subContent");
-                        
-                        $startIndex = 0;
-                        $endIndex = 0;
-                        
-                        foreach ($_st->templateFinder->startIndexes as $si) {
-                            if ($si == null) continue;
-                            
-                            $mainIndex = strpos($responseBody, $si, $mainIndex);
-                            if ($mainIndex === false)
-                                break;
-                            
-                            $mainIndex = $mainIndex  + strlen($si);
-                        }
-                        
-                        if ($mainIndex === false) break;
-                        
-                        $afterLife = strpos($responseBody, $_st->templateFinder->endIndex, $mainIndex);
-                        if ($afterLife === false) {
-                            if ($_st->templateFinder->moveCaretToEndIfNoEndIndex)
-                                $afterLife = strlen(responseBody);
-                            else
-                                break;
-                        }
-                        $subContent = substr($responseBody, $mainIndex, $afterLife-$mainIndex);
-                    } else {
-                        print("noSubContent");
-                        $subContent = $responseBody;
-                    }*/
-                    
                     
                     $resultRow = array();
                     
