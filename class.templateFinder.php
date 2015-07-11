@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * Spinner Template Finder
+ */
 class templateFinder {
     var $startIndexes = array();
     var $endIndex = "";
