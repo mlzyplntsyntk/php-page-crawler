@@ -5,7 +5,7 @@
 class searchTemplate {
     var $templateFinder;
     var $repeats;
-    var $routeWSDL = array();
+    var $routeSPD = array();
     var $name;
 
     function searchTemplate($name, $repeats, $tf)
@@ -26,6 +26,6 @@ class searchTemplate {
     	$w->startIndexes = $startIndexes;
     	$w->sortOrder = $sortOrder;
         
-        array_push($this->routeWSDL, $w);
+        array_push($this->routeSPD, $w);
     }
 }

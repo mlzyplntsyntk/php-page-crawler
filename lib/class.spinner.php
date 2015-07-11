@@ -1,5 +1,4 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
 class spinner {
     
     var $gotAuth;
@@ -33,7 +32,7 @@ class spinner {
         $responseBody = file_get_contents($this->URL, false, $context);
         
         foreach ($this->searchTemplate as $_st)
-        {
+        {        
             $mainIndex = 0;
             $afterLife = 0;
             $startIndex = 0;
@@ -118,7 +117,7 @@ class spinner {
                         }
                         
                         $value = substr($subContent, $startIndex, $endIndex-$startIndex);
-                        array_push($resultRow, array($r->fieldName => $value, "s"=>$startIndex, "e"=>$endIndex));
+                        array_push($resultRow, array($r->fieldName => $value));
                         $startIndex = $endIndex + strlen($toFind);
                     }
                     
@@ -170,7 +169,7 @@ class spinner {
                     }
 
                     $value = substr($responseBody, $startIndex, $endIndex-$startIndex);
-                    array_push($resultRow, array($r->fieldName => $value, "s"=>$startIndex, "e"=>$endIndex));
+                    array_push($resultRow, array($r->fieldName => $value));
                     $startIndex = $endIndex + strlen($toFind);
                 }
                 if (count($resultRow) > 0)
