@@ -8,7 +8,7 @@ class spinner {
     var $authMethod;
     
     var $searchTemplate = array();
-    
+    var $response = "";
     var $URL = "";
     
     function spinner() 
@@ -16,7 +16,7 @@ class spinner {
         
     }
     
-    function getResult() 
+    function getResult($useOlder = false) 
     {
         $result = array();
         
@@ -29,7 +29,9 @@ class spinner {
         );
 
         $context = stream_context_create($opts);
-        $responseBody = file_get_contents($this->URL, false, $context);
+        $responseBody = $useOlder ? $this->response : file_get_contents($this->URL, false, $context);
+        
+        $this->response = $responseBody;
         
         foreach ($this->searchTemplate as $_st)
         {        
